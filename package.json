@@ -1,11 +1,11 @@
 {
-  "name": "jsonresume-theme-flat",
-  "version": "0.3.7",
+  "name": "jsonresume-theme-wraypro",
+  "version": "0.0.1",
   "description": "A theme for JSON Resume",
-  "author": "Mattias Erming",
+  "author": "Sam Wray",
   "repository": {
     "type": "git",
-    "url": "http://github.com/erming/jsonresume-theme-flat"
+    "url": "http://github.com/2xaa/jsonresume-theme-wraypro"
   },
   "scripts": {
     "start": "resume serve"
