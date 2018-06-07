@@ -3,6 +3,7 @@
 body {
   background: #fff;
   color: #000;
+  font-size: 14px;
   font-family: 'Playfair Display', serif;
   margin: 0 0 80px;
 }
@@ -39,6 +40,10 @@ h4 {
   font-family: 'Playfair Display SC', serif;
 }
 
+h4 {
+  font-size: 18px;
+}
+
 header h1 {
   font-size: 6em;
   margin: 0.07em 0;
@@ -55,17 +60,22 @@ section {
   margin-top: 30px;
 }
 
+ul {
+  padding-left: 40px;
+}
+
 li {
   line-height: 1.8;
   list-style: none;
 }
 
 li:before {
-  content: "\f052";
+  content: "\f111";
   float: left;
-  font: 13px Octicons;
-  margin-top: 6px;
-  margin-left: -20px;
+  font: 7px Font Awesome\ 5 Free;
+  font-weight: 900;
+  margin-top: 11px;
+  margin-left: -16px;
   opacity: .1;
   position: absolute;
 }
@@ -91,16 +101,16 @@ h4 span:first-child {
   padding: 0 30px;
 }
 
-.col-sm-6 {
+.column.is-6 {
   margin-bottom: 10px;
 }
 
-.col-sm-12 h4 {
+.column.is-12 h4 {
   margin-top: 12px;
 }
 
-.col-sm-12+.col-sm-12 {
-  margin-top: 30px;
+.column.is-12 + .column.is-12 {
+  margin-top: 10px;
 }
 
 #header {
@@ -138,8 +148,9 @@ h4 span:first-child {
 }
 
 #education .area:before {
-  content: "\f0d7";
-  font: 16px Octicons;
+  content: "\f19c";
+  font: 14px Font Awesome\ 5 Free;
+  font-weight: 900;
   margin-right: 6px;
 }
 
@@ -154,6 +165,17 @@ h4 span:first-child {
 
 #publications .website a:before {
   content: attr(href);
+}
+
+blockquote {
+  padding: 10px 20px;
+  margin: 0 0 20px;
+}
+
+b,
+strong {
+  color: #000;
+  font-weight: 700;
 }
 
 @media (min-width: 480px) {
@@ -181,17 +203,35 @@ h4 span:first-child {
   }
 }
 
+@media (min-width: 769px) {
+  .title-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
 @media (max-width: 768px) {
-  .col-sm-6:last-child {
+  .column.is-6:last-child {
     margin-bottom: 0px;
   }
+
   #content aside {
-    margin-bottom: 20px;
+    margin: 30px 0;
     padding-right: 0;
     text-align: left;
   }
+
   #publications .website a:before {
     content: "View publication";
+  }
+
+  .column.title-container {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .column.title-container + .column {
+    padding-top: 0;
   }
 }
 
@@ -215,5 +255,26 @@ h4 span:first-child {
   }
   #actions {
     display: none;
+  }
+}
+
+@media print {
+  .columns.piece-container {
+    display: block;
+  }
+
+  .piece {
+    /*page-break-before: always;
+    page-break-after: always;*/
+    page-break-inside: avoid;
+  }
+
+  pre, blockquote {
+    page-break-inside: avoid;
+  }
+
+  .title-container {
+    display: flex;
+    justify-content: flex-end;
   }
 }
