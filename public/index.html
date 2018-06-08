@@ -1,0 +1,1067 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+
+    <title>Sam Wray</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+    <style type="text/css">
+      @import url(https://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic,700italic|Playfair+Display+SC|Open+Sans+Condensed:300,300italic,700);
+
+body {
+  background: #fff;
+  color: #000;
+  font-size: 14px;
+  font-family: 'Playfair Display', serif;
+  margin: 0 0 80px;
+}
+
+a {
+  color: #1c89ff;
+}
+
+a:focus,
+a:hover {
+  color: #1c89ff;
+  text-decoration: none;
+}
+
+p {
+  line-height: 1.5;
+  margin: 0;
+}
+
+p+p {
+  margin-top: 10px;
+}
+
+h1 {
+  margin-top: 0;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 400
+}
+
+h2,
+h3,
+h4 {
+  margin: 0.2em 0;
+  font-family: 'Playfair Display SC', serif;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+header h1 {
+  font-size: 6em;
+  margin: 0.07em 0;
+}
+
+header h2 {
+  font-size: 16px;
+  font-family: 'Playfair Display', serif;
+   /* color: #95a5a6;*/
+  margin: 1em 0;
+}
+
+section {
+  margin-top: 30px;
+}
+
+ul {
+  padding-left: 40px;
+}
+
+li {
+  line-height: 1.8;
+  list-style: none;
+}
+
+li:before {
+  content: "\f111";
+  float: left;
+  font: 7px Font Awesome\ 5 Free;
+  font-weight: 900;
+  margin-top: 11px;
+  margin-left: -16px;
+  opacity: .1;
+  position: absolute;
+}
+
+blockquote {
+  border-left: 5px solid #e7e9ec;
+  font-size: 14px;
+}
+
+em {
+  color: #95a5a6;
+  font-weight: normal;
+  font-style: normal;
+}
+
+h4 span:first-child {
+  color: #000;
+  font-weight: bold;
+}
+
+.container {
+  max-width: 750px;
+  padding: 0 30px;
+}
+
+.column.is-6 {
+  margin-bottom: 10px;
+}
+
+.column.is-12 h4 {
+  margin-top: 12px;
+}
+
+.column.is-12 + .column.is-12 {
+  margin-top: 10px;
+}
+
+#header {
+  /*background: #f4f6f6;*/
+  box-sizing: border-box;
+  border-bottom: rgba(0,0,0,0.03) solid 1px;
+  padding: 40px 0;
+  max-width: 1000px;
+  margin: 0 auto 30px auto;
+}
+
+#content h3 {
+  color: #000;
+  font-size: 26px;
+  margin-top: -4px;
+}
+
+#content aside {
+  text-align: right;
+  padding-right: 30px;
+}
+
+/*#profiles .network {
+  text-transform: capitalize;
+}*/
+
+#work .position,
+#volunteer .position {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+#education .area {
+  font-weight: bold;
+}
+
+#education .area:before {
+  content: "\f19c";
+  font: 14px Font Awesome\ 5 Free;
+  font-weight: 900;
+  margin-right: 6px;
+}
+
+#education .studyType {
+  margin-left: 25px;
+}
+
+#awards .summary,
+#publications .summary {
+  margin-top: 8px;
+}
+
+#publications .website a:before {
+  content: attr(href);
+}
+
+blockquote {
+  padding: 10px 20px;
+  margin: 0 0 20px;
+}
+
+b,
+strong {
+  color: #000;
+  font-weight: 700;
+}
+
+@media (min-width: 480px) {
+  .strike-through {
+    border-top: 1px solid #f4f6f6;
+    height: 20px;
+    margin-top: 12px;
+    margin-bottom: -2px;
+    position: relative;
+  }
+  .strike-through span,
+  .strike-through a {
+    background: #fff;
+    position: absolute;
+  }
+  .strike-through span:first-child {
+    padding-right: 20px;
+    margin-top: -12px;
+  }
+  .strike-through span+span {
+    font-size: 14px;
+    margin-top: -10px;
+    padding-left: 20px;
+    right: 0;
+  }
+}
+
+.website {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@media (min-width: 769px) {
+  .title-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 768px) {
+  .column.is-6:last-child {
+    margin-bottom: 0px;
+  }
+
+  #content aside {
+    margin: 30px 0;
+    padding-right: 0;
+    text-align: left;
+  }
+
+  #publications .website a:before {
+    content: "View publication";
+  }
+
+  .column.title-container {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .column.title-container + .column {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 26px;
+  }
+  .date {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  .strike-through span:first-child {
+    margin-bottom: 7px;
+  }
+  .strike-through span {
+    display: block;
+  }
+  #header {
+    margin-bottom: 10px;
+    padding: 40px 0;
+  }
+  #actions {
+    display: none;
+  }
+}
+
+@media print {
+  .columns.piece-container {
+    display: block;
+  }
+
+  .piece {
+    /*page-break-before: always;
+    page-break-after: always;*/
+    page-break-inside: avoid;
+  }
+
+  pre, blockquote {
+    page-break-inside: avoid;
+  }
+
+  .title-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+    </style>
+  </head>
+
+  <body>
+    <header id="header">
+      <div class="container">
+        <div>
+          <h1>
+            Sam Wray
+          </h1>
+          <h2>
+            The polygamous relationship of music, programming and visual arts.
+          </h2>
+        </div>
+      </div>
+    </header>
+    <div id="content" class="container">
+
+    <section id="contact" class="columns">
+      <aside class="column is-3 title-container">
+        <h3>Contact</h3>
+      </aside>
+      <div class="column is-9">
+        <div class="columns is-multiline">
+        <div class="column is-6">
+          <strong>Email</strong>
+          <div class="email">sam@wray.pro</div>
+        </div>
+        <div class="column is-6">
+          <strong>Phone</strong>
+          <div class="phone">(+44)7561557458</div>
+        </div>
+        <div class="column is-6">
+          <strong>Website</strong>
+          <div class="website">
+            <a href="https://wray.pro" target="_blank" rel="noopener">https://wray.pro</a>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+    <section id="about" class="columns">
+      <aside class="column is-3 title-container">
+        <h3>About</h3>
+      </aside>
+      <div class="column is-9">
+        <p>Digital Artist, musician, Louis Theroux lookalike. Sam holds a degree in Digital Art and Technology from Plymouth University, attaining Second Class Honours (Upper Division) with Certificate of Professional Industrial Experience.  He enjoys creating immersive and thoughtful digital works, irl and url.</p>
+      </div>
+    </section>
+    <section id="profiles" class="columns is-multiline">
+      <aside class="column is-3 title-container">
+        <h3>Profiles</h3>
+      </aside>
+      <div class="column is-9">
+        <div class="columns is-multiline">
+          <div class="column is-6">
+            <strong class="network">
+              Twitter
+            </strong>
+            <div class="username">
+              <div class="url">
+                <a href="https://twitter.com/_2xAA" target="_blank" rel="noopener">_2xAA</a>
+              </div>
+            </div>
+          </div>
+          <div class="column is-6">
+            <strong class="network">
+              SoundCloud
+            </strong>
+            <div class="username">
+              <div class="url">
+                <a href="https://soundcloud.com/2xaa/tracks" target="_blank" rel="noopener">2xAA</a>
+              </div>
+            </div>
+          </div>
+          <div class="column is-6">
+            <strong class="network">
+              Github
+            </strong>
+            <div class="username">
+              <div class="url">
+                <a href="https://github.com/2xaa" target="_blank" rel="noopener">2xAA</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="columns">
+      <aside class="column is-3 title-container">
+        <h3>Work</h3>
+      </aside>
+      <div class="column is-9">
+        <div class="columns is-multiline piece-container">
+        <div class="column is-12 piece">
+          <h4 class="strike-through">
+            <span>Kitty</span>
+            <span class="date">
+              2017-04-01 — Current
+            </span>
+          </h4>
+          <div class="columns is-gapless is-marginless is-mobile">
+            <div class="column is-6">
+              <div class="position">
+                Creative Technologist
+              </div>
+            </div>
+            <div class="column is-6">
+              <div class="website has-text-right">
+                <a href="http://wearekitty.com" target="_blank" rel="noopener">http://wearekitty.com</a>
+              </div>
+            </div>
+          </div>
+          <div class="summary">
+            <p>Working in mostly a front-end capacity, work included microsites, large-scale e-commerce websites, interactive experiences using Canvas, prototyping tools for internal use</p>
+          </div>
+          <h4>Highlights</h4>
+          <ul class="highlights">
+            <li class="bullet">Introduced a git-based workflow to the development team</li>
+            <li class="bullet">Created and implemented a use-case for Vue.JS to speed up and unify frontend development</li>
+            <li class="bullet">Contributed to the world&#x27;s first Google Assistant &quot;Voice Search&quot; white-paper by building the data collection tool</li>
+          </ul>
+        </div>
+        <div class="column is-12 piece">
+          <h4 class="strike-through">
+            <span>Kitty: BetVictor</span>
+            <span class="date">
+              2017-04-01 — 2017-06-01
+            </span>
+          </h4>
+          <div class="columns is-gapless is-marginless is-mobile">
+            <div class="column is-6">
+              <div class="position">
+                Lead Developer
+              </div>
+            </div>
+            <div class="column is-6">
+              <div class="website has-text-right">
+                <a href="http://wearekitty.com" target="_blank" rel="noopener">http://wearekitty.com</a>
+              </div>
+            </div>
+          </div>
+          <div class="summary">
+            <p>Betting Calculator</p>
+          </div>
+          <h4>Highlights</h4>
+          <ul class="highlights">
+            <li class="bullet">Application can be installed as a PWA on compatible devices</li>
+            <li class="bullet">A functional betting engine was build separate from the UI as a node module to keep the codebase clean</li>
+            <li class="bullet">VueJS and a webpack/vue prerender plugin was used to ensure SEO results were kept high</li>
+          </ul>
+        </div>
+        <div class="column is-12 piece">
+          <h4 class="strike-through">
+            <span>Games for the Many: CorbynRun</span>
+            <span class="date">
+              2017-4-01 — 2017-5-08
+            </span>
+          </h4>
+          <div class="columns is-gapless is-marginless is-mobile">
+            <div class="column is-6">
+              <div class="position">
+                Musician
+              </div>
+            </div>
+            <div class="column is-6">
+              <div class="website has-text-right">
+                <a href="https://gamesforthemany.org/" target="_blank" rel="noopener">https://gamesforthemany.org/</a>
+              </div>
+            </div>
+          </div>
+          <div class="summary">
+            <p>The viral game that took the General Election 2017 by storm and reached over 2 million people. The music composed for CorbynRun is a cover of &quot;Bandiera Rossa&quot;, created using a Nintendo Game Boy, heralded by the BBC as &quot;Incredibly Annoying&quot;. </p>
+          </div>
+        </div>
+        <div class="column is-12 piece">
+          <h4 class="strike-through">
+            <span>Livity UK: Dyson</span>
+            <span class="date">
+              2016-12-01 — 2017-02-01
+            </span>
+          </h4>
+          <div class="columns is-gapless is-marginless is-mobile">
+            <div class="column is-6">
+              <div class="position">
+                Technical Lead
+              </div>
+            </div>
+            <div class="column is-6">
+              <div class="website has-text-right">
+                <a href="https://goo.gl/qRPGjR" target="_blank" rel="noopener">https://goo.gl/qRPGjR</a>
+              </div>
+            </div>
+          </div>
+          <div class="summary">
+            <p>The Smartrooms (pop-up escape room)</p>
+          </div>
+          <h4>Highlights</h4>
+          <ul class="highlights">
+            <li class="bullet">Technical consultant for game designs</li>
+            <li class="bullet">Web based control panel for starting livestreamed participation, switching rooms, games and lights</li>
+            <li class="bullet">Arduino based devices for in-game interactivity</li>
+            <li class="bullet">All built primarily within two weeks</li>
+          </ul>
+        </div>
+        <div class="column is-12 piece">
+          <h4 class="strike-through">
+            <span>Buzz Jam/Red Bull/Sony Music/WMAS/YGN</span>
+            <span class="date">
+              2016-09-16 — 2016-09-18
+            </span>
+          </h4>
+          <div class="columns is-gapless is-marginless is-mobile">
+            <div class="column is-6">
+              <div class="position">
+                Coder/Hacker
+              </div>
+            </div>
+            <div class="column is-6">
+              <div class="website has-text-right">
+                <a href="https://www.buzz-jam.com" target="_blank" rel="noopener">https://www.buzz-jam.com</a>
+              </div>
+            </div>
+          </div>
+          <div class="summary">
+            <p>BuzzJam 2016 hackday instrument. MIDI Controller/Lighting Controller/stand-alone sampler. Read more here: http://wray.pro/stardis/</p>
+          </div>
+          <h4>Highlights</h4>
+          <ul class="highlights">
+            <li class="bullet">Building from abstract brief</li>
+            <li class="bullet">Using previously unknown technologies to complete the project</li>
+            <li class="bullet">Raspberry Pi and Arduino based controls</li>
+            <li class="bullet">All built in three days</li>
+          </ul>
+        </div>
+        <div class="column is-12 piece">
+          <h4 class="strike-through">
+            <span>Buzz Jam/Red Bull/Sony Music/WMAS/YGN</span>
+            <span class="date">
+              2015-09-19 — 2015-09-20
+            </span>
+          </h4>
+          <div class="columns is-gapless is-marginless is-mobile">
+            <div class="column is-6">
+              <div class="position">
+                Coder/Hacker
+              </div>
+            </div>
+            <div class="column is-6">
+              <div class="website has-text-right">
+                <a href="http://www.buzz-jam.com" target="_blank" rel="noopener">http://www.buzz-jam.com</a>
+              </div>
+            </div>
+          </div>
+          <div class="summary">
+            <p>BuzzJam 2015 hackday instrument built using Game Boys and Guitar Hero controllers. Read more here: http://wray.pro/blade/</p>
+          </div>
+          <h4>Highlights</h4>
+          <ul class="highlights">
+            <li class="bullet">Building from abstract brief</li>
+            <li class="bullet">Using previously unknown technologies to complete the project</li>
+            <li class="bullet">Raspberry Pi, Game Boy and Arduino based controllers</li>
+            <li class="bullet">All built in two days</li>
+          </ul>
+        </div>
+        <div class="column is-12 piece">
+          <h4 class="strike-through">
+            <span>Tellonline</span>
+            <span class="date">
+              2014-05-01 — 2015-06-01
+            </span>
+          </h4>
+          <div class="columns is-gapless is-marginless is-mobile">
+            <div class="column is-6">
+              <div class="position">
+                Junior Developer
+              </div>
+            </div>
+            <div class="column is-6">
+              <div class="website has-text-right">
+                <a href="" target="_blank" rel="noopener"></a>
+              </div>
+            </div>
+          </div>
+          <div class="summary">
+            <p></p>
+          </div>
+          <h4>Highlights</h4>
+          <ul class="highlights">
+            <li class="bullet">Building and maintaining a realtime game system holding 30,000 users simultaneously</li>
+            <li class="bullet">Successfully working with the team to create style guidelines and implement a front-end framework</li>
+            <li class="bullet">Pairing with developers to assist and aid ASP.NET development tasks</li>
+          </ul>
+        </div>
+        <div class="column is-12 piece">
+          <h4 class="strike-through">
+            <span>PJ Studio | Creative Media Ltd</span>
+            <span class="date">
+              2012-03-01 — 2014-01-01
+            </span>
+          </h4>
+          <div class="columns is-gapless is-marginless is-mobile">
+            <div class="column is-6">
+              <div class="position">
+                Web Developer
+              </div>
+            </div>
+            <div class="column is-6">
+              <div class="website has-text-right">
+                <a href="http://pjstudio.co.uk/" target="_blank" rel="noopener">http://pjstudio.co.uk/</a>
+              </div>
+            </div>
+          </div>
+          <div class="summary">
+            <p>Part-time consultant and web-developer. Work includes templating websites in HTML and CSS, developing plugins with jQuery, JS work, PHP scripting and working with Wordpress</p>
+          </div>
+        </div>
+        <div class="column is-12 piece">
+          <h4 class="strike-through">
+            <span>Rewired State</span>
+            <span class="date">
+              2013-10-01 — 2013-10-01
+            </span>
+          </h4>
+          <div class="columns is-gapless is-marginless is-mobile">
+            <div class="column is-6">
+              <div class="position">
+                Web Developer
+              </div>
+            </div>
+            <div class="column is-6">
+              <div class="website has-text-right">
+                <a href="http://rewiredstate.org/" target="_blank" rel="noopener">http://rewiredstate.org/</a>
+              </div>
+            </div>
+          </div>
+          <div class="summary">
+            <p>Edited a hack day app with involvement from the Department for International Development.</p>
+          </div>
+        </div>
+        <div class="column is-12 piece">
+          <h4 class="strike-through">
+            <span>Blue Flame Media Ltd</span>
+            <span class="date">
+              2013-04-01 — 2013-05-01
+            </span>
+          </h4>
+          <div class="columns is-gapless is-marginless is-mobile">
+            <div class="column is-6">
+              <div class="position">
+                Web Developer
+              </div>
+            </div>
+            <div class="column is-6">
+              <div class="website has-text-right">
+                <a href="" target="_blank" rel="noopener"></a>
+              </div>
+            </div>
+          </div>
+          <div class="summary">
+            <p>Edited websites with a Wordpress CMS, added a booking system built in PHP and jQuery for a local client. Templated a website in HTML and CSS for their partner company, Payment Nexus.</p>
+          </div>
+        </div>
+        <div class="column is-12 piece">
+          <h4 class="strike-through">
+            <span>Southwest Film and Television Archive</span>
+            <span class="date">
+              2011-06-01 — 2011-07-01
+            </span>
+          </h4>
+          <div class="columns is-gapless is-marginless is-mobile">
+            <div class="column is-6">
+              <div class="position">
+                Software and Systems researcher
+              </div>
+            </div>
+            <div class="column is-6">
+              <div class="website has-text-right">
+                <a href="http://swfta.co.uk/" target="_blank" rel="noopener">http://swfta.co.uk/</a>
+              </div>
+            </div>
+          </div>
+          <div class="summary">
+            <p>Researched the best web player and video codecs for their online library service.</p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="volunteer" class="columns">
+      <aside class="column is-3 title-container">
+        <h3>Community</h3>
+      </aside>
+      <div class="column is-9">
+        <div class="columns is-multiline piece-container">
+        <div class="column is-12 piece">
+          <h4 class="strike-through">
+            <span>{ Live : JS }</span>
+            <span class="date">
+              2016-12-02 — Current
+            </span>
+          </h4>
+          <div class="columns is-gapless is-marginless is-mobile">
+            <div class="column is-6">
+              <div class="position">
+                Visualist &amp; Musician
+              </div>
+            </div>
+            <div class="column is-6">
+              <div class="website has-text-right">
+                <a href="http://livejs.network/" target="_blank" rel="noopener">http://livejs.network/</a>
+              </div>
+            </div>
+          </div>
+          <div class="summary">
+            <p>{ Live : JS } is a collective of audio and visual artists who build live experiences, shows and installations using custom projects and tools built within the web browser. Notable work includes speaking and performing at dotJS 2016 and the JSConf EU 2018 opening.</p>
+          </div>
+        </div>
+        <div class="column is-12 piece">
+          <h4 class="strike-through">
+            <span>Young Rewired State</span>
+            <span class="date">
+              2013-08-01 — 2014-08-01
+            </span>
+          </h4>
+          <div class="columns is-gapless is-marginless is-mobile">
+            <div class="column is-6">
+              <div class="position">
+                Volunteer and music event organiser
+              </div>
+            </div>
+            <div class="column is-6">
+              <div class="website has-text-right">
+                <a href="http://yrs.io/" target="_blank" rel="noopener">http://yrs.io/</a>
+              </div>
+            </div>
+          </div>
+          <div class="summary">
+            <p>Guided and taught young programmers over the course of one week each year, in 2014 I was also in charge of contacting, booking and managing the musicians for the Friday evening.</p>
+          </div>
+        </div>
+        <div class="column is-12 piece">
+          <h4 class="strike-through">
+            <span>Plymouth Musical Activities Club</span>
+            <span class="date">
+              2012-10-01 — 2013-12-01
+            </span>
+          </h4>
+          <div class="columns is-gapless is-marginless is-mobile">
+            <div class="column is-6">
+              <div class="position">
+                Guitar teacher and audio technician
+              </div>
+            </div>
+            <div class="column is-6">
+              <div class="website has-text-right">
+                <a href="http://plymouthmac.co.uk/" target="_blank" rel="noopener">http://plymouthmac.co.uk/</a>
+              </div>
+            </div>
+          </div>
+          <div class="summary">
+            <p></p>
+          </div>
+        </div>
+        <div class="column is-12 piece">
+          <h4 class="strike-through">
+            <span>Southwest Film and Television Archive</span>
+            <span class="date">
+              2009-05-01 — 2011-08-01
+            </span>
+          </h4>
+          <div class="columns is-gapless is-marginless is-mobile">
+            <div class="column is-6">
+              <div class="position">
+                Archivist
+              </div>
+            </div>
+            <div class="column is-6">
+              <div class="website has-text-right">
+                <a href="http://swfta.co.uk/" target="_blank" rel="noopener">http://swfta.co.uk/</a>
+              </div>
+            </div>
+          </div>
+          <div class="summary">
+            <p>Cataloguing film and video, digitising video recorded on 1&quot; tape, Betamax, VCR, sVHS, Telecine with 16mm film and also editing all the aforementioned formats using various editing processes with new and old equipment.</p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="columns">
+      <aside class="column is-3 title-container">
+        <h3>Education</h3>
+      </aside>
+      <div class="column is-9">
+        <div class="columns is-multiline piece-container">
+        <div class="column is-12 piece">
+          <h4 class="strike-through">
+            <span>Plymouth University</span>
+            <span class="date">
+              2012-07-01 — 2016-06-01
+            </span>
+          </h4>
+          <div class="area">
+            Digital Art and Technology
+          </div>
+          <div class="studyType">
+            Bachelor [Second Class Honours (Upper Division) with Certificate of Professional Industrial Experience]
+          </div>
+          <h4>Courses</h4>
+          <ul class="courses">
+            <li>DAT602 - Realtime [audio and visual production skills with a specific application to the manifestation of information drawn from a variety of sources, disciplines and media]</li>
+            <li>DAT604 - Venture Culture [concepts of entrepreneurship through the practical exploration of individual, collaborative and organisational creative enterprise]</li>
+            <li>DAT605 - Premediation [technical and conceptual skills to experiment and innovate with live, immersive 2D and 3D audio-visual media]</li>
+          </ul>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="awards" class="columns">
+      <aside class="column is-3 title-container">
+        <h3>Awards</h3>
+      </aside>
+      <div class="column is-9">
+        <div class="columns is-multiline piece-container">
+        <div class="column is-12 piece">
+          <h4 class="strike-through">
+            <span>Webster Award</span>
+          </h4>
+          <div class="columns is-gapless is-marginless is-mobile">
+            <div class="column is-6">
+              <div class="awarder">
+                <em>by</em>
+                <strong>The Webster Family</strong>
+              </div>
+            </div>
+            <div class="column is-6">
+                <div class="date has-text-right">
+                  <em>Awarded</em>
+                  2016-09-01
+                </div>
+            </div>
+          </div>
+          <div class="summary">
+            Awarded for my final year University project, Melodal
+          </div>
+        </div>
+        <div class="column is-12 piece">
+          <h4 class="strike-through">
+            <span>Hack the Visual [hackathon]</span>
+          </h4>
+          <div class="columns is-gapless is-marginless is-mobile">
+            <div class="column is-6">
+              <div class="awarder">
+                <em>by</em>
+                <strong>Imaging Mind / Canon</strong>
+              </div>
+            </div>
+            <div class="column is-6">
+                <div class="date has-text-right">
+                  <em>Awarded</em>
+                  2015-06-28
+                </div>
+            </div>
+          </div>
+          <div class="summary">
+            &#x27;Splatmap&#x27; - First place
+          </div>
+        </div>
+        <div class="column is-12 piece">
+          <h4 class="strike-through">
+            <span>McDonald&#x27;s Hackathon</span>
+          </h4>
+          <div class="columns is-gapless is-marginless is-mobile">
+            <div class="column is-6">
+              <div class="awarder">
+                <em>by</em>
+                <strong>McDonald&#x27;s EU</strong>
+              </div>
+            </div>
+            <div class="column is-6">
+                <div class="date has-text-right">
+                  <em>Awarded</em>
+                  2014-11-23
+                </div>
+            </div>
+          </div>
+          <div class="summary">
+            &#x27;Big Hack with Fries&#x27; - First place
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="publications" class="columns">
+      <aside class="column is-3 title-container">
+        <h3>Publications</h3>
+      </aside>
+      <div class="column is-9">
+        <div class="columns is-multiline piece-container">
+        <div class="column is-12 piece">
+          <h4 class="strike-through">
+            <span>{ Live : JS } @ dotJS 2016</span>
+            <span class="date">
+              2016-12-02
+            </span>
+          </h4>
+
+          <div class="columns is-gapless is-marginless is-mobile">
+            <div class="column is-6">
+              <div class="publisher">
+                <em>Published by</em>
+                <strong>Sam Wray / Tim Pietrusky</strong>
+              </div>
+            </div>
+            <div class="column is-6">
+              <div class="website has-text-right">
+                <a href="https://www.dotconferences.com/2016/12/sam-wray-tim-pietrusky-livejs" target="_blank" rel="noopener"></a>
+              </div>
+            </div>
+          </div>
+          <div class="summary">
+            <p>Sam and Tim have an extreme passion for music, visualisations and JavaScript. In 2016 they met each other for the first time and decided to combine their projects into one massive audio &amp; visual live performance. This is their story.</p>
+          </div>
+        </div>
+        <div class="column is-12 piece">
+          <h4 class="strike-through">
+            <span>modV</span>
+            <span class="date">
+              2014-12-16
+            </span>
+          </h4>
+
+          <div class="columns is-gapless is-marginless is-mobile">
+            <div class="column is-6">
+              <div class="publisher">
+                <em>Published by</em>
+                <strong>Sam Wray</strong>
+              </div>
+            </div>
+            <div class="column is-6">
+              <div class="website has-text-right">
+                <a href="https://modv.js.org" target="_blank" rel="noopener"></a>
+              </div>
+            </div>
+          </div>
+          <div class="summary">
+            <p>modV is an open-source audio visualisation environment, written in Google Chrome. It is my pet project for learning new web technologies and my main tool when VJing at shows.</p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="columns">
+      <aside class="column is-3 title-container">
+        <h3>Skills</h3>
+      </aside>
+      <div class="column is-9">
+        <div class="columns is-multiline piece-container">
+        <div class="column is-6 piece">
+          <div class="name">
+            <h4>Software</h4>
+          </div>
+          <ul class="keywords">
+            <li>JavaScript (incl. Node.JS)</li>
+            <li>XHTML</li>
+            <li>CSS</li>
+            <li>HTML Canvas</li>
+            <li>WebGL</li>
+            <li>Vue (incl. Vuex, Router)</li>
+            <li>Webpack</li>
+            <li>Bash</li>
+            <li>Python</li>
+            <li>SQL</li>
+            <li>MongoDB</li>
+          </ul>
+        </div>
+        <div class="column is-6 piece">
+          <div class="name">
+            <h4>Physical Computing</h4>
+          </div>
+          <ul class="keywords">
+            <li>Arduino</li>
+            <li>Teensy</li>
+            <li>ESP8266</li>
+            <li>IoT</li>
+          </ul>
+        </div>
+        <div class="column is-6 piece">
+          <div class="name">
+            <h4>Additional</h4>
+          </div>
+          <ul class="keywords">
+            <li>Music composition</li>
+            <li>Blender</li>
+            <li>Adobe CC</li>
+            <li>Event management</li>
+            <li>Online community management</li>
+          </ul>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="languages" class="columns">
+      <aside class="column is-3 title-container">
+        <h3>Languages</h3>
+      </aside>
+      <div class="column is-9">
+        <div class="columns is-multiline piece-container">
+        <div class="column is-6 piece">
+          <div class="language">
+            <strong>English</strong>
+          </div>
+          <div class="fluency">
+            Native speaker
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="interests" class="columns">
+      <aside class="column is-3 title-container">
+        <h3>Interests</h3>
+      </aside>
+      <div class="column is-9">
+        <div class="columns is-multiline">
+        <div class="column is-6 piece">
+          <div class="name">
+            <h4>Music</h4>
+          </div>
+          <ul class="keywords">
+            <li>Using retro computer and gaming hardware to create modern, interesting music (search &#x27;2xAA music&#x27;)</li>
+            <li>Composing</li>
+            <li>Visualisation</li>
+          </ul>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="references" class="columns">
+      <aside class="column is-3 title-container">
+        <h3>References</h3>
+      </aside>
+      <div class="column is-9">
+        <div class="columns is-multiline piece-container">
+        <div class="column is-12 piece">
+          <blockquote class="reference">
+            <p>During the period of time that Sam worked with us at PJ Studio as one of our web developers, he added a strong arm to the team. With briefs being passed to him in a variety of formats, Sam was quick to work out the best solution and put it in to practice; even when the outcome desired by our clients or creative team members wasn&#x27;t straight forward. Sam was a truly positive addition to the studio.</p>
+            <p class="name">
+              <strong>— Phil Johns</strong>
+            </p>
+          </blockquote>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    </div>
+  </body>
+</html>
